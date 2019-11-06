@@ -133,7 +133,7 @@ namespace TechJobsConsole
                     {
                         Console.WriteLine(value.Key + "  : " + value.Value);
                     }
-
+                    Console.WriteLine("*****");
                 }
             }
             else

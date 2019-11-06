@@ -147,16 +147,17 @@ namespace TechJobsConsole
             {
                 foreach (KeyValuePair<string, string> detail in job)
                 {
-                    string aValue = detail.Value;
-                    if (aValue.IndexOf(value, System.StringComparison.OrdinalIgnoreCase) >= 0)
+                    //string aValue = detail.Value;
+                    //if (aValue.IndexOf(value, StringComparison.OrdinalIgnoreCase) >= 0)
+                    if (detail.Value.ToUpper().Contains(value.ToUpper()))
                     {
                         jobs.Add(job);
                         break;
                     }
-                    else
-                    {
-                        Console.WriteLine("There are no results for that entry.");
-                    }
+                    //else
+                    //{
+                    //    Console.WriteLine("There are no results for that entry.");
+                    //}
                 }
             }
             return jobs;
